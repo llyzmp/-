@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.note-wrapper {
+    width: 1220px;
+    margin: 50px auto;
+    /* background-color: red; */
+}
+/* 清除浮动 */
+.note-wrapper::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.note-column {
+    float: left;
+    width: 220px;
+    margin-left: 12px;
+    margin-right: 12rpx;
+}
+.note {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    margin-bottom: 28px;
+}
+.note::before {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.2);
+    z-index: 1;
+}
+.note:hover::before {
+    display: block;
+}
+/* 图片宽 */
+.note-img {
+    width: 100%;
+}
+.note-img img {
+    width: 100%;
+}
+/* 有视频的标志 */
+.note-img .video {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url('./image/sprites.png');
+    background-position: -10px -10px;
+    background-color: red;
+}
+.info {
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    margin: 10px 15px;
+    line-height: 24px;
+}
+.note-append {
+    padding: 0 15px 10px;
+}
+.note-append::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.user {
+    float: left;
+}
+.like {
+    float: right;
+}
+.avatar,.name {
+    display: inline-block;
+    vertical-align: middle;
+}
+.avatar {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: red;
+    overflow: hidden;
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+}
+.verified {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    /* background-color: red; */
+    background-image: url('./image/sprites.png');
+    background-position: -48px -55px;
+}
+.name {
+    font-size: 12px;
+    color: #555;
+}
+.likes,.heart {
+    vertical-align: middle;
+}
+.likes {
+    font-size: 12px;
+    color: #555;
+}
+.heart {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url('./image/sprites.png');
+    background-position: -55px -10px;
+}
+.heart--red {
+    background-position: -10px -55px;
+}
+.more {
+    /* 清除浮动 */
+    clear: both;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #ff2741;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
